@@ -1,0 +1,58 @@
+중앙분리대 cctv 신호등 위치
+
+신고 데이터 파악
+
+뭐가 없다? 여기가 최적의 위치다.
+
+
+wrtn
+
+cctv_busan = pd.read_csv('data/cctv_busan.csv')
+
+신호등_busan = pd.read_csv('data/신호등_busan.csv')
+
+진로변경방법위반_busan = pd.read_csv('data/진로변경방법위반_busan.csv')
+중앙선침범_busan = pd.read_csv('data/중앙선침범_busan.csv')
+신호위반_busan = pd.read_csv('data/신호위반_busan.csv') 
+불법좌회전_busan = pd.read_csv('data/불법좌회전_busan.csv')
+불법유턴_busan = pd.read_csv('data/불법유턴_busan.csv')
+
+gdf_traffic_light = gpd.GeoDataFrame(신호등_busan, geometry=gpd.points_from_xy(신호등_busan.lng, 신호등_busan.lat))
+
+- cctv
+
+진로변경방법위반
+중앙선침범
+신호위반
+좌회전위반
+불법유턴
+
+- 신호등
+
+
+
+
+
+https://dacon.io/codeshare/1620?dtype=recent
+
+
+
+cctv 신고건수를 비교
+
+
+
+# GeoDataFrame으로 변환
+gdf_cctv = gpd.GeoDataFrame(cctv_busan, geometry=gpd.points_from_xy(cctv_busan.lng, cctv_busan.lat))
+gdf_진로변경방법위반 = gpd.GeoDataFrame(진로변경방법위반_busan, geometry=gpd.points_from_xy(진로변경방법위반_busan.lng, 진로변경방법위반_busan.lat))
+
+# 그래프 사이즈 설정
+fig, ax = plt.subplots(figsize=(10, 10))
+
+# CCTV 위치 표시
+gdf_cctv.plot(ax=ax, color='blue', label='CCTV')
+
+# 신호등 위치 표시
+gdf_진로변경방법위반.plot(ax=ax, color='red', label='진로변경방법위반_busan')
+
+plt.legend()
+plt.show()
