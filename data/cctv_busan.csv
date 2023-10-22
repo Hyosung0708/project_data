@@ -1,4 +1,4 @@
-﻿id,name,lng,lat,url,geometry
+﻿id,address,lng,lat,url,geometry
 79,센텀중,129.1239937,35.1736251,https://its.busan.go.kr/traffic/exclude/cctvPopup.do?cctvid=79&title=센텀중&isvr=undefined,POINT (129.1239937 35.1736251)
 53,수영1호교사거리,129.12561,35.16539,https://its.busan.go.kr/traffic/exclude/cctvPopup.do?cctvid=53&title=수영1호교사거리&isvr=undefined,POINT (129.12561 35.16539)
 54,수영2호교입구(민락),129.12813,35.15991,https://its.busan.go.kr/traffic/exclude/cctvPopup.do?cctvid=54&title=수영2호교입구(민락)&isvr=undefined,POINT (129.12813 35.15991)
